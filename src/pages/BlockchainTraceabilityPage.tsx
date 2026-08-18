@@ -198,19 +198,10 @@ export const BlockchainTraceabilityPage: React.FC = () => {
                 {/* Real Live QR Scanner */}
                 <QrScanner onScanSuccess={handleRealScan} themeColor="#087A4B" />
 
-                <div className="mt-8 space-y-4 w-full">
-                  <p className="text-xs text-center text-[#56635B] dark:text-emerald-100/50 mb-2">
+                <div className="mt-4 w-full">
+                  <p className="text-xs text-center text-[#56635B] dark:text-emerald-100/50">
                     Point camera at QR code to scan automatically
                   </p>
-                  
-                  {/* Keep fallback button just in case camera fails or desktop use */}
-                  <button 
-                    onClick={handleSimulateScan}
-                    disabled={isLoading}
-                    className="w-full py-4 bg-[#087A4B]/10 hover:bg-[#087A4B]/20 dark:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/20 text-[#087A4B] dark:text-[#A3E635] rounded-full font-bold transition-all active:scale-95 disabled:opacity-50 border border-[#087A4B]/30 dark:border-[#A3E635]/30"
-                  >
-                    {isLoading ? 'Querying Blockchain...' : `Simulate Scan (${targetBatchId})`}
-                  </button>
                 </div>
               </div>
 
